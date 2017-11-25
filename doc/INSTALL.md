@@ -52,8 +52,9 @@ grant all privileges on database odoo_prod to odoo_user
 sudo cp /etc/postgresql/9.5/main/pg_hba.conf /etc/postgresql/9.5/main/pg_hba.conf.bk
 sudo gedit /etc/postgresql/9.5/main/pg_hba.conf # or whatever text editor you like
 # Then replace every "peer" by "md5"
-# At the end this command should works :
-psql  -h localhost -U odoo_user -W odoo_prod
+sudo service postgresql restart # Restart the service
+# Finally this command should works :
+psql -U odoo_user -W odoo_prod
 # On SQL prompt
 odoo_prod=> \dt;
 No relations found.
