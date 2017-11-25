@@ -35,7 +35,7 @@ He adds the PR link to the TMS ticket.
 
 Step B : on the PROD environnement
 -------------
-Once the test are conpleted, the repo management team merge DEV -> 9.0 (production branch).
+Once the test are completed, the repo management team merge DEV -> 9.0 (production branch).
 
 => The hosting team update the code on staging instance, install/uninstall/update module dans execute migration scripts. They set the ticket to "on prod" status and send a message to users to describe the changes (basicly a screenshot of the ticket list that have be solved).
 
