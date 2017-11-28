@@ -1,8 +1,12 @@
 # INSTALL
+## Table of Contents
+1. [Back End Dependencies](#back-end)
+2. [Front End Dependencies](#front-end)
+3. [Database](#database)
+4. [Launch the app](#launch)
 
-## Back End Dependencies
-
-### Virtualenv and Pyenv
+## Back End Dependencies <a name="back-end"></a>
+### Virtualenv and Pyenv
 
 We strongly recommend you to create a virtual environment :
 
@@ -17,7 +21,7 @@ cd odoo-production/
 echo "python27" > .python-version # replace "python27" by your virtualenv's name
 pip install -r odoo/requirements.txt
 ```
-### For Ubuntu users
+### For Ubuntu users
 
 You may have to install the following packages :
 
@@ -25,13 +29,13 @@ You may have to install the following packages :
 sudo apt-get install libxml2-dev libxslt1-dev python-dev libxslt libldap2-dev libsasl2-dev libssl-dev
 ```
 
-## Front End Dependencies
+## Front End Dependencies <a name="front-end">
 
 ```bash
 npm install
 ```
 
-### For Ubuntu users
+### For Ubuntu users
 
 You may have to install the following package :
 
@@ -39,7 +43,7 @@ You may have to install the following package :
 sudo apt install npm
 ```
 
-## Database
+## Database <a name="database"></a>
 ```bash
 # Please replace " odoo_user" and "odoo_prod" with the value you want
 sudo -u postgres createuser -P odoo_user
@@ -61,14 +65,14 @@ No relations found.
 odoo_prod=> \q
 ```
 
-### For Ubuntu users
+### For Ubuntu users
 
 You may have to install the following package :
 
 ```bash
 sudo apt install postgresql
 ```
-## Launch the app
+## Launch the app <a name="launch"></a>
 
 ```bash
 python odoo/odoo.py -w odoo_user -r odoo_passwd --addons-path=odoo/addons/,louve_addons,intercoop_addons
