@@ -59,7 +59,7 @@ sudo apt install npm node-less nodejs-legacy
 Create a postgres user.
 
 ```bash
-# Please replace " odoo_user" and "odoo_prod" with the value you want
+# Please replace " odoo_user" with the value you want
 sudo -u postgres createuser -P odoo_user
 sudo -u postgres psql
 ```
