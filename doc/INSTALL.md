@@ -37,7 +37,7 @@ pip install -r odoo/requirements.txt
 You may have to install the following packages :
 
 ```bash
-sudo apt-get install libxml2-dev libxslt1-dev python-dev libxslt libldap2-dev libsasl2-dev libssl-dev
+sudo apt-get install libxml2-dev libxslt1-dev python-dev libldap2-dev libsasl2-dev libssl-dev
 ```
 
 ## Front End Dependencies <a name="front-end">
