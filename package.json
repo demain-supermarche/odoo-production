@@ -1,0 +1,28 @@
+{
+  "name": "odoo-production",
+  "version": "1.0.0",
+  "description": "ERP to manage Demain staff",
+  "main": "index.js",
+  "dependencies": {
+    "less": "^2.7.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demain-supermarche/odoo-production.git"
+  },
+  "keywords": [
+    "ERP",
+    "Demain",
+    "Odoo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/demain-supermarche/odoo-production/issues"
+  },
+  "homepage": "https://github.com/demain-supermarche/odoo-production#readme"
+}
