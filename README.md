@@ -2,7 +2,7 @@
 
 For developers please check [our install doc](doc/INSTALL.md).
 
-If you want to work with us please check [our processing doc](doc/DEVPROCESSING.md).
+If you want to work with us please check [our processing doc](doc/DEVPROCESS.md).
 
 
 ## Quick start
