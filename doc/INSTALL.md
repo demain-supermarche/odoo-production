@@ -89,7 +89,7 @@ sudo apt install postgresql
 ## Launch the app <a name="launch"></a>
 
 ```bash
-python odoo/odoo.py -w odoo_user -r odoo_passwd --addons-path=odoo/addons/,louve_addons,intercoop_addons
+python odoo/odoo.py -r odoo_user -w odoo_passwd --addons-path=odoo/addons/,louve_addons,intercoop_addons
 # To not forget to replace odoo_user by your user and odoo_passwd by its password
 ```
 
