@@ -1,18 +1,29 @@
-<record id="product_custom_view" model="ir.ui.view">
-  <field name="name">
-    product.template.product.form.inherit
-  </field>
-  <field name="model">
-    product.template
-  </field>
-  <field name="inherit_id" ref="product.product_template_form_view"/>
-    <field name="arch" type="xml">
-      <xpath expr="//page[@name='General Information']/group" position="before">
-             <field name="default_code" position="after">
-                     <field name="column_one"/>
-                     <field name="column_two"/>
-             </field>
-      </xpath>
-    </field>
-  </field>
-</record>
+<openerp>
+    <data>
+
+     <record model="ir.ui.view" id="add_field_product_tree">
+         <field name="name">add.field.product.tree</field>
+         <field name="model">product.template</field>
+         <field name="inherit_id" ref="product.product_template_tree_view"/>
+         <field name="arch" type="xml">
+         <xpath expr="//field[@name='type']" position="after">
+           <field name="column_one"/>
+           <field name="column_two"/>
+             </xpath>
+          </field>
+     </record>
+
+     <record model="ir.ui.view" id="add_field_product_form">
+      <field name="name">add.field.product.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_only_form_view"/>
+      <field name="arch" type="xml">
+      <xpath expr="//field[@name='type']" position="after">
+        <field name="column_one"/>
+        <field name="column_two"/>
+   </xpath>
+      </field>
+     </record>
+
+    </data>
+</openerp>

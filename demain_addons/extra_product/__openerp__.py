@@ -11,9 +11,9 @@
     'author': 'Demain',
     'website': 'http://www.yourwebsite.com',
     'depends': ['product'],
-    # 'data': [
-    #   'views/product_custom_view.xml',
-    # ],
+     'data': [
+       'views/product_custom_view.xml',
+     ],
     'installable': True,
     'auto_install': False,
 }
