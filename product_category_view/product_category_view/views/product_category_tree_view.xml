@@ -1,0 +1,52 @@
+<openerp><data>
+  <record id="product_category_tree_view" model="ir.ui.view">
+    <field name="name">product.category.tree</field>
+    <field name="model">product.category</field>
+    <field name="field_parent">child_id</field>
+    <field name="arch" type="xml">
+        <tree toolbar="True" string="Product Categories">
+            <field name="name"/>
+        </tree>
+    </field>
+  </record>
+
+  <record id="product_category_action" model="ir.actions.act_window">
+    <field name="name">Products by Category</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">product.category</field>
+    <field name="domain">[('parent_id','=',False)]</field>
+    <field name="view_type">tree</field>
+    <field name="view_id" ref="product_category_tree_view"/>
+    <field name="help" type="html">
+      <p>
+        Here is a list of all your products classified by category. You
+        can click a category to get the list of all products linked to
+        this category or to a child of this category.
+      </p>
+    </field>
+  </record>
+
+  <menuitem
+      action="product_category_action"
+      id="product.menu_products_category"
+      parent="purchase.menu_procurement_management"
+      sequence="30" groups="base.group_no_one"/>
+
+    <record id="product_normal_action_tree" model="ir.actions.act_window">
+      <field name="name">Product Variants</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">product.product</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form,kanban</field>
+      <field name="context">{'categ_id':active_id, 'search_default_categ_id':active_id}</field>
+    </record>
+
+
+  <record id="ir_product_category_open" model="ir.values">
+    <field eval="'tree_but_open'" name="key2"/>
+    <field eval="'product.category'" name="model"/>
+    <field name="name">Products by Categories</field>
+    <field eval="'ir.actions.act_window,%d'%product_normal_action_tree" name="value"/>
+  </record>
+</data>
+</openerp>
