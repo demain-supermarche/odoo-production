@@ -94,3 +94,20 @@ python odoo/odoo.py -r odoo_user -w odoo_passwd --addons-path=odoo/addons/,louve
 ```
 
 Open your favorite browser and go to [127.0.0.1:8069](http://127.0.0.1:8069)
+
+# Errors you may encounter
+
+The following issue can appear when you launch Odoo on Ubuntu 17 :
+
+```bash
+  File "/home/clembuntu/.pyenv/versions/demain_odoo/lib/python2.7/site-packages/psycopg2/__init__.py", line 50, in <module>
+    from psycopg2._psycopg import (                     # noqa
+ImportError: /home/clembuntu/.pyenv/versions/demain_odoo/lib/python2.7/site-packages/psycopg2/.libs/libresolv-2-c4c53def.5.so: symbol __res_maybe_init, version GLIBC_PRIVATE not defined in file libc.so.6 with link time reference
+```
+
+Then just do
+```bash
+pip uninstall psycopg2 && pip install psycopg2
+```
+In order to have psycoph2 in 2.7.4 version.
+
